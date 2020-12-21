@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.heading {
+  margin: 2rem 0 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.heading h1 {
+  font-size: 3.5rem;
+  margin: 3rem 0 2rem;
+  font-family: "Press Start 2P", cursive;
+  color: #663200;
+}
+
+.heading p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.holes {
+  margin: 5rem 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.hole {
+  position: relative;
+  height: 60px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #663200;
+  overflow: hidden;
+  display: none;
+}
+
+.button button {
+  background-color: black;
+  height: 50px;
+  width: 120px;
+  border: 2px solid white;
+  margin: 2rem 1rem 0;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.reset {
+  display: none;
+}
+
+.mole {
+  position: absolute;
+  z-index: 1;
+  height: 90px;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: mole 400ms linear;
+  pointer-events: none;
+  transition: bottom linear 500ms;
+}
+@keyframes mole {
+  from {
+    bottom: -90px;
+  }
+  to {
+    bottom: -30px;
+  }
+}
